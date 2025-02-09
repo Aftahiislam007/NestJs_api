@@ -10,7 +10,7 @@ import {
     PrismaService
 } from "src/prisma/prisma.service";
 
-@Injectable({})
+@Injectable()
 export class AuthService {
     constructor(private prisma: PrismaService) {}
     signup() {
