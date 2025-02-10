@@ -20,8 +20,8 @@ export class AuthContoller {
     constructor(private authService: AuthService) {}
 
     @Post('signup')
-    signup(@Body() dto: AuthDto) {
-        return this.authService.signup();
+    async signup(@Body() authDto: AuthDto) {
+        return this.authService.signup(authDto);
     }
 
     @Post('signin')
