@@ -3,10 +3,10 @@ services:
   dev-db:
     image: postgres:13
     ports:
-      - 5434:5432
+      - 5432
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 123
+      POSTGRES_PASSWORD: Admin
       POSTGRES_DB: nest
     networks:
       - neoscoder
