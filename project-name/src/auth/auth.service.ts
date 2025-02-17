@@ -24,13 +24,15 @@ export class AuthService {
                 email: dto.email,
                 hash,
             },
-
-            select: {
-                id: true,
-                email: true,
-                createdAt: true,
-            },
         });
+
+        const {
+            hash: _,
+            ...userWithoutHash
+        } = user;
+
+        return userWithoutHash;
+        // delete user.hash;
 
         return user;
     }

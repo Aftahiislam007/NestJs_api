@@ -21,6 +21,9 @@ export class AuthContoller {
 
     @Post('signup')
     async signup(@Body() authDto: AuthDto) {
+        // console.log({
+        //     authDto,
+        // });
         return this.authService.signup(authDto);
     }
 
